@@ -1,0 +1,30 @@
+C:\Users\johuotar\Desktop\Dokumentit\Tower Roguelike\TowerAdventure\TowerAdventure\bin\Debug\TowerAdventure.exe.config
+C:\Users\johuotar\Desktop\Dokumentit\Tower Roguelike\TowerAdventure\TowerAdventure\bin\Debug\TowerAdventure.exe
+C:\Users\johuotar\Desktop\Dokumentit\Tower Roguelike\TowerAdventure\TowerAdventure\bin\Debug\TowerAdventure.pdb
+C:\Users\johuotar\Desktop\Dokumentit\Tower Roguelike\TowerAdventure\TowerAdventure\obj\Debug\TowerAdventure.exe
+C:\Users\johuotar\Desktop\Dokumentit\Tower Roguelike\TowerAdventure\TowerAdventure\obj\Debug\TowerAdventure.pdb
+C:\Users\Johuotar\Desktop\Tower Roguelike\TowerAdventure\TowerAdventure\bin\Debug\TowerAdventure.exe.config
+C:\Users\Johuotar\Desktop\Tower Roguelike\TowerAdventure\TowerAdventure\bin\Debug\TowerAdventure.exe
+C:\Users\Johuotar\Desktop\Tower Roguelike\TowerAdventure\TowerAdventure\bin\Debug\TowerAdventure.pdb
+C:\Users\Johuotar\Desktop\Tower Roguelike\TowerAdventure\TowerAdventure\obj\Debug\TowerAdventure.exe
+C:\Users\Johuotar\Desktop\Tower Roguelike\TowerAdventure\TowerAdventure\obj\Debug\TowerAdventure.pdb
+C:\Users\johuotar\Desktop\Dokumentit\Tower Roguelike\TowerAdventure\TowerAdventure\obj\Debug\TowerAdventure.csprojResolveAssemblyReference.cache
+C:\Users\johuotar\Dropbox\Omat tiedostot\rl testi itemit\Tower Roguelike\TowerAdventure\TowerAdventure\bin\Debug\TowerAdventure.exe.config
+C:\Users\johuotar\Dropbox\Omat tiedostot\rl testi itemit\Tower Roguelike\TowerAdventure\TowerAdventure\obj\Debug\TowerAdventure.exe
+C:\Users\johuotar\Dropbox\Omat tiedostot\rl testi itemit\Tower Roguelike\TowerAdventure\TowerAdventure\obj\Debug\TowerAdventure.pdb
+C:\Users\johuotar\Desktop\Dokumentit\Tower Roguelike itemit\Tower Roguelike\TowerAdventure\TowerAdventure\bin\Debug\TowerAdventure.exe.config
+C:\Users\johuotar\Desktop\Dokumentit\Tower Roguelike itemit\Tower Roguelike\TowerAdventure\TowerAdventure\obj\Debug\TowerAdventure.exe
+C:\Users\johuotar\Desktop\Dokumentit\Tower Roguelike itemit\Tower Roguelike\TowerAdventure\TowerAdventure\obj\Debug\TowerAdventure.pdb
+C:\Users\johuotar\Desktop\Dokumentit\Tower Roguelike itemit\Tower Roguelike\TowerAdventure\TowerAdventure\bin\Debug\TowerAdventure.exe
+C:\Users\johuotar\Desktop\Dokumentit\Tower Roguelike itemit\Tower Roguelike\TowerAdventure\TowerAdventure\bin\Debug\TowerAdventure.pdb
+C:\Users\Johuotar\Desktop\Tower Roguelike itemit\Tower Roguelike\TowerAdventure\TowerAdventure\bin\Debug\TowerAdventure.exe.config
+C:\Users\Johuotar\Desktop\Tower Roguelike itemit\Tower Roguelike\TowerAdventure\TowerAdventure\bin\Debug\TowerAdventure.exe
+C:\Users\Johuotar\Desktop\Tower Roguelike itemit\Tower Roguelike\TowerAdventure\TowerAdventure\bin\Debug\TowerAdventure.pdb
+C:\Users\Johuotar\Desktop\Tower Roguelike itemit\Tower Roguelike\TowerAdventure\TowerAdventure\obj\Debug\TowerAdventure.exe
+C:\Users\Johuotar\Desktop\Tower Roguelike itemit\Tower Roguelike\TowerAdventure\TowerAdventure\obj\Debug\TowerAdventure.pdb
+C:\Users\Johuotar\Dropbox\Omat tiedostot\Tower Roguelike\TowerAdventure\TowerAdventure\bin\Debug\TowerAdventure.exe.config
+C:\Users\Johuotar\Dropbox\Omat tiedostot\Tower Roguelike\TowerAdventure\TowerAdventure\obj\Debug\TowerAdventure.exe
+C:\Users\Johuotar\Dropbox\Omat tiedostot\Tower Roguelike\TowerAdventure\TowerAdventure\obj\Debug\TowerAdventure.pdb
+C:\Users\Johuotar\Dropbox\Omat tiedostot\Tower Roguelike\TowerAdventure\TowerAdventure\bin\Debug\TowerAdventure.exe
+C:\Users\Johuotar\Dropbox\Omat tiedostot\Tower Roguelike\TowerAdventure\TowerAdventure\bin\Debug\TowerAdventure.pdb
+C:\Users\Johuotar\Dropbox\Omat tiedostot\Tower Roguelike\TowerAdventure\TowerAdventure\obj\Debug\TowerAdventure.csprojResolveAssemblyReference.cache
