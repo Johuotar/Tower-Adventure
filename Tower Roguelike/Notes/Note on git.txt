@@ -2,3 +2,4 @@ commands:
 
 cd
 pwd
+:wq
