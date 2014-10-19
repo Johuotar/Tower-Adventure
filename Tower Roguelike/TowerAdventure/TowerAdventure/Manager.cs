@@ -45,7 +45,6 @@ namespace TowerAdventure
             }
             if (Map.nMapArray[Program.nPlayerY + nDeltaY, Program.nPlayerX + nDeltaX] == GlobalVar.CLOSED_DOOR)
             {
-                //newclass.nMapArray[Program.nPlayerX + nDeltaX, Program.nPlayerY + nDeltaY] = GlobalVar.OPEN_DOOR; /OriginalCode, new is below
                 Map.nMapArray.SetValue(GlobalVar.OPEN_DOOR, Program.nPlayerY + nDeltaY, Program.nPlayerX + nDeltaX);
             }
             else if (Map.nMapArray[Program.nPlayerY + nDeltaY, Program.nPlayerX + nDeltaX] == GlobalVar.LOCKED_DOOR)
