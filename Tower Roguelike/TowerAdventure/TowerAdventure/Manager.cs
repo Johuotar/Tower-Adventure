@@ -9,6 +9,8 @@ namespace TowerAdventure
     class Manager
     {
         Tile tile = new Tile();
+
+
         public void OpenDoorCommand()
         {
             Console.SetCursorPosition(GlobalVar.MAP_WIDTH + 2, 10);
@@ -45,6 +47,13 @@ namespace TowerAdventure
             {
                 //newclass.nMapArray[Program.nPlayerX + nDeltaX, Program.nPlayerY + nDeltaY] = GlobalVar.OPEN_DOOR; /OriginalCode, new is below
                 Map.nMapArray.SetValue(GlobalVar.OPEN_DOOR, Program.nPlayerY + nDeltaY, Program.nPlayerX + nDeltaX);
+            }
+            else if (Map.nMapArray[Program.nPlayerY + nDeltaY, Program.nPlayerX + nDeltaX] == GlobalVar.LOCKED_DOOR)
+            {
+                Console.SetCursorPosition(GlobalVar.MAP_WIDTH + 2, 11);
+                Console.Write("The door is locked.");
+                Console.ReadKey();
+                Console.Clear();
             }
             Console.Clear();
         }
@@ -89,6 +98,173 @@ namespace TowerAdventure
         }
 
 
+
+        public void UseItemCommand()
+        {
+            Console.SetCursorPosition(GlobalVar.MAP_WIDTH + 2, 10);
+            Console.Write("Use which item? 0-9");
+            Console.SetCursorPosition(GlobalVar.MAP_WIDTH + 2, 11);
+            Console.Write("Use Item in slot: ");
+
+            string sKeyPress = Console.ReadLine();//because of readline must press enter, key doesnt work well with int
+
+            int nSlot;
+            //Must make sure its int and between zero and max inventory slots
+            if (int.TryParse(sKeyPress, out nSlot) && nSlot >= 0 && nSlot < GlobalVar.INVENTORY_SLOTS) //chosen slot must be 0-9
+            {
+                //use item
+                switch (Program.nInventory[nSlot])
+                {
+                    case GlobalVar.ITEM_EMPTY: //if no item
+                        Console.SetCursorPosition(GlobalVar.MAP_WIDTH + 2, 12);
+                        Console.Write("No item to use!");
+                        Console.ReadKey();
+                        Console.Clear();
+                        break;
+                    default: //if no item use set
+                        Console.SetCursorPosition(GlobalVar.MAP_WIDTH + 2, 12);
+                        Console.Write("Don't know how to use this item!");
+                        Console.ReadKey();
+                        Console.Clear();
+                        break;
+                    case GlobalVar.ITEM_POTION:
+                        Console.SetCursorPosition(GlobalVar.MAP_WIDTH + 2, 12);
+                        Console.Write("You drink potion.");
+                        Program.nInventory[nSlot] = GlobalVar.ITEM_EMPTY; //removes item from player
+                        Console.ReadKey();
+                        Console.Clear();
+                        break;
+                    case GlobalVar.ITEM_PICKAXE:
+                        UsePickaxe(); //so large it has method/function
+                        break;
+                    case GlobalVar.ITEM_KEY:
+                        UseKey(); //so large it has method/function
+                        break;
+                }
+
+            }
+            else
+            {
+                Console.SetCursorPosition(GlobalVar.MAP_WIDTH + 2, 12);//incorrect slot chosen
+                Console.Write("Incorrect slot.");
+                Console.ReadKey();
+            }
+        }
+
+        public void UsePickaxe()
+        {
+            Console.SetCursorPosition(GlobalVar.MAP_WIDTH + 2, 10);
+            Console.Write("Which direction to mine?");
+
+
+            char ckInfo = Console.ReadKey().KeyChar; //handle keys
+            int nDeltaX = 0;
+            int nDeltaY = 0;
+            switch (ckInfo)//needs error checking!
+            {
+                case 'w':
+                case 'W':
+                    nDeltaX = 0;
+                    nDeltaY = -1;
+                    break;
+                case 'a':
+                case 'A':
+                    nDeltaX = -1;
+                    nDeltaY = 0;
+                    break;
+                case 's':
+                case 'S':
+                    nDeltaX = 0;
+                    nDeltaY = 1;
+                    break;
+                case 'd':
+                case 'D':
+                    nDeltaX = 1;
+                    nDeltaY = 0;
+                    break;
+            }
+            if (Map.nMapArray[Program.nPlayerY + nDeltaY, Program.nPlayerX + nDeltaX] == GlobalVar.TILE_WALL)
+            {
+                Map.nMapArray[Program.nPlayerY + nDeltaY, Program.nPlayerX + nDeltaX] = GlobalVar.TILE_FLOOR;
+                ItemMap.nItemArray[Program.nPlayerY + nDeltaY, Program.nPlayerX + nDeltaX] = GlobalVar.ITEM_ROCK;
+                Console.SetCursorPosition(GlobalVar.MAP_WIDTH + 2, 11);
+                Console.Write("You smash the rock to pieces.");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else
+            {
+                Console.SetCursorPosition(GlobalVar.MAP_WIDTH + 2, 11);
+                Console.Write("That's not a wall!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+        }
+
+        public void UseKey()
+        {
+            Console.SetCursorPosition(GlobalVar.MAP_WIDTH + 2, 10);
+            Console.Write("Specify direction.");
+
+
+            char ckInfo = Console.ReadKey().KeyChar; //handle keys
+            int nDeltaX = 0;
+            int nDeltaY = 0;
+            switch (ckInfo)//needs error checking!
+            {
+                case 'w':
+                case 'W':
+                    nDeltaX = 0;
+                    nDeltaY = -1;
+                    break;
+                case 'a':
+                case 'A':
+                    nDeltaX = -1;
+                    nDeltaY = 0;
+                    break;
+                case 's':
+                case 'S':
+                    nDeltaX = 0;
+                    nDeltaY = 1;
+                    break;
+                case 'd':
+                case 'D':
+                    nDeltaX = 1;
+                    nDeltaY = 0;
+                    break;
+            }
+            if (Map.nMapArray[Program.nPlayerY + nDeltaY, Program.nPlayerX + nDeltaX] == GlobalVar.LOCKED_DOOR)
+            {
+                Map.nMapArray[Program.nPlayerY + nDeltaY, Program.nPlayerX + nDeltaX] = GlobalVar.CLOSED_DOOR;
+                Console.SetCursorPosition(GlobalVar.MAP_WIDTH + 2, 11);
+                Console.Write("You unlock the door.");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (Map.nMapArray[Program.nPlayerY + nDeltaY, Program.nPlayerX + nDeltaX] == GlobalVar.OPEN_DOOR)
+            {
+                Console.SetCursorPosition(GlobalVar.MAP_WIDTH + 2, 11);
+                Console.Write("Close the door before locking it.");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else if (Map.nMapArray[Program.nPlayerY + nDeltaY, Program.nPlayerX + nDeltaX] == GlobalVar.CLOSED_DOOR)
+            {
+                Map.nMapArray[Program.nPlayerY + nDeltaY, Program.nPlayerX + nDeltaX] = GlobalVar.LOCKED_DOOR;
+                Console.SetCursorPosition(GlobalVar.MAP_WIDTH + 2, 11);
+                Console.Write("You lock the door.");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            else
+            {
+                Console.SetCursorPosition(GlobalVar.MAP_WIDTH + 2, 11);
+                Console.Write("Nothing to use the key on.");
+                Console.ReadKey();
+                Console.Clear();
+            }
+        }
+
         public void GetCommand()
         {
             if (ItemMap.nItemArray[Program.nPlayerY, Program.nPlayerX] == GlobalVar.ITEM_EMPTY)
@@ -112,20 +288,21 @@ namespace TowerAdventure
             Console.Write("Drop which item? 0-9");
             Console.SetCursorPosition(GlobalVar.MAP_WIDTH + 2, 11);
             Console.Write("Drop Item in slot: ");
+
             string sKeyPress = Console.ReadLine();//because of readline must press enter, key doesnt work well with int
 
             int nSlot;
             //Must make sure its int and between zero and max inventory slots
-            if (int.TryParse(sKeyPress, out nSlot ) && nSlot >= 0 && nSlot <= GlobalVar.INVENTORY_SLOTS && Program.nInventory[nSlot] != GlobalVar.ITEM_EMPTY )
+            if (int.TryParse(sKeyPress, out nSlot ) && nSlot >= 0 && nSlot < GlobalVar.INVENTORY_SLOTS && Program.nInventory[nSlot] != GlobalVar.ITEM_EMPTY )
             {
                 if (ItemMap.nItemArray[Program.nPlayerY, Program.nPlayerX] == GlobalVar.ITEM_EMPTY) //Is there item already on the tile?
                 {
-                    ItemMap.nItemArray[Program.nPlayerY, Program.nPlayerX] = Program.nInventory[nSlot]; //drops item
+                    ItemMap.nItemArray[Program.nPlayerY, Program.nPlayerX] = Program.nInventory[nSlot]; //puts copy of item to floor
                     Program.nInventory[nSlot] = GlobalVar.ITEM_EMPTY; //removes item from player
                 }
                 else
                 {
-                    Console.SetCursorPosition(GlobalVar.MAP_WIDTH + 2, 10);//notify about item on the tile
+                    Console.SetCursorPosition(GlobalVar.MAP_WIDTH + 2, 12);//notify about item on the tile
                     Console.Write("No room to drop the item.");
                     Console.ReadKey();
                 }
@@ -133,7 +310,7 @@ namespace TowerAdventure
             else
             {
                 //Input was incorrect, either it wasnt int between inventory min and max or the slot had no item.
-                Console.SetCursorPosition(GlobalVar.MAP_WIDTH + 2, 10);
+                Console.SetCursorPosition(GlobalVar.MAP_WIDTH + 2, 12);
                 Console.Write("No item in such slot.");
                 Console.ReadKey();
             }

@@ -73,7 +73,7 @@ namespace TowerAdventure
                     case 'Q':
                             GameRunning = false;
                             break;
-                    case 'L': //This button tests change of location display
+                    case 'L': //changes location display for testing purpose
                             infobar.currentlocation = GlobalVar.Location2;
                             break;
                     case 'o':
@@ -87,6 +87,9 @@ namespace TowerAdventure
                             break;
                     case 'h':
                             manager.DropCommand();
+                            break;
+                    case 'u':
+                            manager.UseItemCommand();
                             break;
                 }
                 if (manager.IsPassable(nPlayerX + nDeltaX, nPlayerY + nDeltaY))

@@ -44,8 +44,8 @@ namespace TowerAdventure
             { 1, new ITEM_TYPE {nCharacter=(char)173, nColorCode= 11, p_szName= "Potion"}},
             { 2, new ITEM_TYPE {nCharacter='*', nColorCode= 8, p_szName= "Rock"}},
             { 3, new ITEM_TYPE {nCharacter=(char)168, nColorCode= 7, p_szName= "Mysterious Object"}},
-            { 4, new ITEM_TYPE {nCharacter='B', nColorCode= 7, p_szName= "Placeholder"}},
-            { 5, new ITEM_TYPE {nCharacter='C', nColorCode= 7, p_szName= "Placeholder"}}
+            { 4, new ITEM_TYPE {nCharacter='T', nColorCode= 8, p_szName= "Pickaxe"}},
+            { 5, new ITEM_TYPE {nCharacter='k', nColorCode= 8, p_szName= "Key"}}
         };
         public struct TILE_TYPE
         {
@@ -64,7 +64,8 @@ namespace TowerAdventure
             { 2, new TILE_TYPE {nCharacter='>', nColorCode= 7, bPassable=true}},
             { 3, new TILE_TYPE {nCharacter='<', nColorCode= 7, bPassable=true}},
             { 4, new TILE_TYPE {nCharacter='|', nColorCode= 6, bPassable=true}},
-            { 5, new TILE_TYPE {nCharacter='+', nColorCode= 6, bPassable=false}}
+            { 5, new TILE_TYPE {nCharacter='+', nColorCode= 6, bPassable=false}},
+            { 6, new TILE_TYPE {nCharacter='+', nColorCode= 6, bPassable=false}}
         };
     }
 }

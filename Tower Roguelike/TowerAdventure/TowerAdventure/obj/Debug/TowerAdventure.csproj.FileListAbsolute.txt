@@ -28,3 +28,9 @@ C:\Users\Johuotar\Dropbox\Omat tiedostot\Tower Roguelike\TowerAdventure\TowerAdv
 C:\Users\Johuotar\Dropbox\Omat tiedostot\Tower Roguelike\TowerAdventure\TowerAdventure\bin\Debug\TowerAdventure.exe
 C:\Users\Johuotar\Dropbox\Omat tiedostot\Tower Roguelike\TowerAdventure\TowerAdventure\bin\Debug\TowerAdventure.pdb
 C:\Users\Johuotar\Dropbox\Omat tiedostot\Tower Roguelike\TowerAdventure\TowerAdventure\obj\Debug\TowerAdventure.csprojResolveAssemblyReference.cache
+C:\Tower-Adventure\Tower Roguelike\TowerAdventure\TowerAdventure\bin\Debug\TowerAdventure.exe.config
+C:\Tower-Adventure\Tower Roguelike\TowerAdventure\TowerAdventure\obj\Debug\TowerAdventure.exe
+C:\Tower-Adventure\Tower Roguelike\TowerAdventure\TowerAdventure\obj\Debug\TowerAdventure.pdb
+C:\Tower-Adventure\Tower Roguelike\TowerAdventure\TowerAdventure\bin\Debug\TowerAdventure.exe
+C:\Tower-Adventure\Tower Roguelike\TowerAdventure\TowerAdventure\bin\Debug\TowerAdventure.pdb
+C:\Tower-Adventure\Tower Roguelike\TowerAdventure\TowerAdventure\obj\Debug\TowerAdventure.csprojResolveAssemblyReference.cache
