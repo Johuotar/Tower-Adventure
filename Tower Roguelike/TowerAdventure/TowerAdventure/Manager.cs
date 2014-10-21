@@ -9,7 +9,27 @@ namespace TowerAdventure
     class Manager
     {
         Tile tile = new Tile();
+        ActorList actorlist = new ActorList();
 
+        //theres no removefromlist, Garbagecollector should handle it in c# automaticly
+        public bool AddActorToList(Actor[] p_cNewActor)
+        { 
+            // Run through the list looking for an empty slot
+            int i = 0;
+            for (i = 0; i < GlobalVar.MAX_ACTORS; i++)
+            {
+                // Is this empty?
+                if (actorlist.p_cActorList[i] == null)
+                {
+                    // If so, use it!
+                    actorlist.p_cActorList = p_cNewActor;
+                    // Finished! Report success
+                    return true;
+                }
+            }
+            // Couldn't find a free slot. Report failure.
+            return false;
+        }
 
         public void OpenDoorCommand()
         {

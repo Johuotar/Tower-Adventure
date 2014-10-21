@@ -35,6 +35,7 @@ namespace TowerAdventure
 
         //values
         public const int INVENTORY_SLOTS = 10;
+        public const int MAX_ACTORS = 30;
 
     }
 }

@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actor.cs" />
+    <Compile Include="ActorList.cs" />
     <Compile Include="GlobalVar.cs" />
     <Compile Include="InfoBar.cs" />
     <Compile Include="ItemMap.cs" />
