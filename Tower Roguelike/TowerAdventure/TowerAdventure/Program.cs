@@ -29,10 +29,6 @@ namespace TowerAdventure
             infobar.NamePlayer();
             Console.CursorVisible = false;
 
-            /*ChildClass npc = new ChildClass(); //example character creation 1*
-            npc.SetAppearance('&');
-            npc.SetPos(2, 2);*/
-
             ActorList actorlist = new ActorList();
 
             int i = 0;
@@ -41,18 +37,24 @@ namespace TowerAdventure
                 actorlist.p_cActorList[i] = null;
             }
 
-            //spawn actors in list test2 KESKEN KESKEN !!!!?!?!?!?
-            Actor[] p_cNewActor;
+            Manager manager = new Manager(); //now moved out of while loop
 
-            /*p_cNewActor = new Actor();
-p_cNewActor->SetAppearance( '@', RED );
-p_cNewActor->SetPos( rand() % MAP_HEIGHT, rand() % MAP_WIDTH );
-AddActorToList( p_cNewActor );*/
+            Actor actor = new Actor();
+
+            Actor newActor;
+
+            for (i = 0; i < GlobalVar.MAX_ACTORS; i++)
+            {
+                manager.AddActorToList(newActor);
+                actorlist.p_cActorList[i].SetAppearance('@');
+                actorlist.p_cActorList[i].SetPos(5, 5);
+                
+            }
+
+
 
             while (GameRunning)//main game loop
             {
-                //instantiantion of class data
-                Manager manager = new Manager();
                 
                 manager.DrawMap();//draw the map before player & npc
 
@@ -72,10 +74,6 @@ AddActorToList( p_cNewActor );*/
 
                 infobar.DrawStats();
                 Console.SetCursorPosition(0, 0); //move cursor so it doesnt show the input button so much
-
-
-                //npc.Draw();
-                //npc.Update(); //example character creation 1*
 
                 int nDeltaX = 0;
                 int nDeltaY = 0;
