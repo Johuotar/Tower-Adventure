@@ -41,17 +41,18 @@ namespace TowerAdventure
 
             Actor actor = new Actor();
 
-            Actor newActor;
 
             for (i = 0; i < GlobalVar.MAX_ACTORS; i++)
             {
-                manager.AddActorToList(newActor);
-                actorlist.p_cActorList[i].SetAppearance('@');
-                actorlist.p_cActorList[i].SetPos(5, 5);
-                
+                manager.AddActorToList(actor); //p_cActorList values are not null here
             }
 
+            for (i = 0; i < GlobalVar.MAX_ACTORS; i++)
+            {
+                actorlist.p_cActorList[i].SetAppearance('@'); //p_cActorList values turn into null here
+                actorlist.p_cActorList[i].SetPos(11, 9);
 
+            }
 
             while (GameRunning)//main game loop
             {

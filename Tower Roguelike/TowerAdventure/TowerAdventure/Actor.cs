@@ -9,8 +9,8 @@ namespace TowerAdventure
     public class Actor
     {
         
-        public int nPosX = 8;
-        public int nPosY = 7;
+        public int nPosX = 9;
+        public int nPosY = 9;
         public char nDisplayChar = ('@');
 
 

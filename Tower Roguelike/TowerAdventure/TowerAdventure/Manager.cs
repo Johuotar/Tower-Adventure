@@ -10,9 +10,10 @@ namespace TowerAdventure
     {
         Tile tile = new Tile();
         ActorList actorlist = new ActorList();
+        Actor actor = new Actor();
 
         //theres no removefromlist, Garbagecollector should handle it in c# automaticly
-        public bool AddActorToList(Actor[] p_cNewActor)
+        public bool AddActorToList(Actor actor)
         { 
             // Run through the list looking for an empty slot
             int i = 0;
@@ -22,7 +23,7 @@ namespace TowerAdventure
                 if (actorlist.p_cActorList[i] == null)
                 {
                     // If so, use it!
-                    actorlist.p_cActorList = p_cNewActor;
+                    actorlist.p_cActorList[i] = actor;
                     // Finished! Report success
                     return true;
                 }
