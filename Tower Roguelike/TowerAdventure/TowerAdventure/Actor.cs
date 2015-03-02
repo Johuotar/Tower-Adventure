@@ -9,53 +9,51 @@ namespace TowerAdventure
     public class Actor
     {
         
-        public int nPosX = 9;
-        public int nPosY = 9;
-        public char nDisplayChar = ('@');
+        public int nPosX;
+        public int nPosY;
+        public char nDisplayChar;
 
-
-        public void SetAppearance(char nDisplayChar)
+        public virtual void SetAppearance(char nDisplayChar)
         { }
 
-        public void SetPos(int x, int y)
+        public virtual void SetPos(int x, int y)
         { }
 
-        public void Draw()
+        public virtual void Draw()
         { }
 
-        public void Update()
+        public virtual void Update()
         { }
     }
 
 
-    public class ChildClass : Actor
+    public class Human : Actor
     {
         Manager manager = new Manager(); //instantiate class to call IsPassable
 
-        new public void SetAppearance(char nDisplayChar)
+        public override void SetAppearance(char nDisplayChar)
         {
             this.nDisplayChar = nDisplayChar;
         }
 
-        new public void SetPos(int x, int y)
+        public override void SetPos(int x, int y)
         {
             this.nPosX = x;
             this.nPosY = y;
         }
 
-        new public void Draw()
+        public override void Draw()
         {
-            Console.SetCursorPosition(this.nPosX, this.nPosY);
+            Console.SetCursorPosition(this.nPosX, this.nPosY); //code never reaches this place
             Console.Write(this.nDisplayChar);
             Console.SetCursorPosition(0, 0); //move cursor so it doesnt show the input button so much
 
         }
 
-        new public void Update() //moves npc randomly
+        public override void Update() //moves npc randomly
         {
-            Random random = new Random();
-            int iDeltaX = random.Next(-1, 2);
-            int iDeltaY = random.Next(-1, 2);
+            int iDeltaX = RandomMove.RandomNumber(-1, 2);
+            int iDeltaY = RandomMove.RandomNumber(-1, 2);
 
             if(manager.IsPassable(this.nPosX + iDeltaX, this.nPosY + iDeltaY))
             {

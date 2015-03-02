@@ -33,3 +33,9 @@ C:\Tower-Adventure\Tower Roguelike\TowerAdventure\TowerAdventure\bin\Debug\Tower
 C:\Tower-Adventure\Tower Roguelike\TowerAdventure\TowerAdventure\bin\Debug\TowerAdventure.pdb
 C:\Tower-Adventure\Tower Roguelike\TowerAdventure\TowerAdventure\obj\Debug\TowerAdventure.exe
 C:\Tower-Adventure\Tower Roguelike\TowerAdventure\TowerAdventure\obj\Debug\TowerAdventure.pdb
+C:\projects\Tower-Adventure\Tower Roguelike\TowerAdventure\TowerAdventure\bin\Debug\TowerAdventure.exe.config
+C:\projects\Tower-Adventure\Tower Roguelike\TowerAdventure\TowerAdventure\obj\Debug\TowerAdventure.exe
+C:\projects\Tower-Adventure\Tower Roguelike\TowerAdventure\TowerAdventure\obj\Debug\TowerAdventure.pdb
+C:\projects\Tower-Adventure\Tower Roguelike\TowerAdventure\TowerAdventure\bin\Debug\TowerAdventure.exe
+C:\projects\Tower-Adventure\Tower Roguelike\TowerAdventure\TowerAdventure\bin\Debug\TowerAdventure.pdb
+C:\projects\Tower-Adventure\Tower Roguelike\TowerAdventure\TowerAdventure\obj\Debug\TowerAdventure.csprojResolveAssemblyReference.cache

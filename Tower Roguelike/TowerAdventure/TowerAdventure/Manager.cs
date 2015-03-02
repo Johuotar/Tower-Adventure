@@ -20,10 +20,10 @@ namespace TowerAdventure
             for (i = 0; i < GlobalVar.MAX_ACTORS; i++)
             {
                 // Is this empty?
-                if (actorlist.p_cActorList[i] == null)
+                if (ActorList.p_cActorList[i] == null)
                 {
                     // If so, use it!
-                    actorlist.p_cActorList[i] = actor;
+                    ActorList.p_cActorList[i] = actor;
                     // Finished! Report success
                     return true;
                 }

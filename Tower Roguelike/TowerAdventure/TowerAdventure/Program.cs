@@ -34,23 +34,26 @@ namespace TowerAdventure
             int i = 0;
             for (i = 0; i < GlobalVar.MAX_ACTORS; i++) // Initialize the actor list to be empty
             {
-                actorlist.p_cActorList[i] = null;
+                ActorList.p_cActorList[i] = null;
             }
 
             Manager manager = new Manager(); //now moved out of while loop
 
-            Actor actor = new Actor();
+            Human actor = new Human();
 
 
             for (i = 0; i < GlobalVar.MAX_ACTORS; i++)
             {
-                manager.AddActorToList(actor); //p_cActorList values are not null here
+                manager.AddActorToList(actor); //p_cActorList filled
             }
 
             for (i = 0; i < GlobalVar.MAX_ACTORS; i++)
             {
-                actorlist.p_cActorList[i].SetAppearance('@'); //p_cActorList values turn into null here
-                actorlist.p_cActorList[i].SetPos(11, 9);
+                if (ActorList.p_cActorList[i] != null)
+                {
+                    ActorList.p_cActorList[i].SetAppearance('@');
+                    ActorList.p_cActorList[i].SetPos(7, 8);
+                }
 
             }
 
@@ -61,12 +64,14 @@ namespace TowerAdventure
 
                 manager.ShowInventory(); // draw the inventory
 
+                Console.ForegroundColor = ConsoleColor.Red; //makes NPC more visible
+
                 for (i = 0; i < GlobalVar.MAX_ACTORS; i++)
                 {
-                    if (actorlist.p_cActorList[i] != null)
+                    if (ActorList.p_cActorList[i] != null)
                     {
-                        actorlist.p_cActorList[i].Update();
-                        actorlist.p_cActorList[i].Draw();
+                        ActorList.p_cActorList[i].Update();
+                        ActorList.p_cActorList[i].Draw();
                     }
                 }
                 Console.SetCursorPosition(nPlayerX, nPlayerY);

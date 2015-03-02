@@ -9,6 +9,6 @@ namespace TowerAdventure
     class ActorList
     {
         // This is array of all actors with max actors as its size.
-        public Actor[] p_cActorList = new Actor[GlobalVar.MAX_ACTORS];
+        public static Actor[] p_cActorList = new Actor[GlobalVar.MAX_ACTORS];
     }
 }

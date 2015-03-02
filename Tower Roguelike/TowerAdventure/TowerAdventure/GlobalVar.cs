@@ -37,5 +37,8 @@ namespace TowerAdventure
         public const int INVENTORY_SLOTS = 10;
         public const int MAX_ACTORS = 3;
 
+        //randomness
+        public static Random random = new Random();
+
     }
 }
