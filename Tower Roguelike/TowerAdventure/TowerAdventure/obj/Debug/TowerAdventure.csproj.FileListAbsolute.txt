@@ -39,3 +39,8 @@ C:\projects\Tower-Adventure\Tower Roguelike\TowerAdventure\TowerAdventure\obj\De
 C:\projects\Tower-Adventure\Tower Roguelike\TowerAdventure\TowerAdventure\bin\Debug\TowerAdventure.exe
 C:\projects\Tower-Adventure\Tower Roguelike\TowerAdventure\TowerAdventure\bin\Debug\TowerAdventure.pdb
 C:\projects\Tower-Adventure\Tower Roguelike\TowerAdventure\TowerAdventure\obj\Debug\TowerAdventure.csprojResolveAssemblyReference.cache
+C:\Users\Johuotar\Tower-Adventure\Tower Roguelike\TowerAdventure\TowerAdventure\bin\Debug\TowerAdventure.exe.config
+C:\Users\Johuotar\Tower-Adventure\Tower Roguelike\TowerAdventure\TowerAdventure\obj\Debug\TowerAdventure.exe
+C:\Users\Johuotar\Tower-Adventure\Tower Roguelike\TowerAdventure\TowerAdventure\obj\Debug\TowerAdventure.pdb
+C:\Users\Johuotar\Tower-Adventure\Tower Roguelike\TowerAdventure\TowerAdventure\bin\Debug\TowerAdventure.exe
+C:\Users\Johuotar\Tower-Adventure\Tower Roguelike\TowerAdventure\TowerAdventure\bin\Debug\TowerAdventure.pdb

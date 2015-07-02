@@ -10,7 +10,8 @@ namespace TowerAdventure
     {
         public void Ascii()
         {
-            Console.OutputEncoding = System.Text.Encoding.GetEncoding(1252);
+
+            Console.OutputEncoding = System.Text.Encoding.GetEncoding(437); //1252 is the original encoding, this one might be more diverse.
         }
 
         public struct ITEM_TYPE
@@ -41,11 +42,12 @@ namespace TowerAdventure
         public Dictionary<int, ITEM_TYPE> sItemIndex = new Dictionary<int, ITEM_TYPE>()
         {
             { 0, new ITEM_TYPE {nCharacter=',', nColorCode= 7, p_szName= "Empty"}},
-            { 1, new ITEM_TYPE {nCharacter=(char)173, nColorCode= 11, p_szName= "Potion"}},
+            { 1, new ITEM_TYPE {nCharacter=(char)33, nColorCode= 11, p_szName= "Potion"}},
             { 2, new ITEM_TYPE {nCharacter='*', nColorCode= 8, p_szName= "Rock"}},
             { 3, new ITEM_TYPE {nCharacter=(char)168, nColorCode= 7, p_szName= "Mysterious Object"}},
             { 4, new ITEM_TYPE {nCharacter='T', nColorCode= 8, p_szName= "Pickaxe"}},
-            { 5, new ITEM_TYPE {nCharacter='k', nColorCode= 8, p_szName= "Key"}}
+            { 5, new ITEM_TYPE {nCharacter='k', nColorCode= 8, p_szName= "Key"}},
+            { 6, new ITEM_TYPE {nCharacter=(char)22, nColorCode= 5, p_szName= "Test Object"}}
         };
         public struct TILE_TYPE
         {

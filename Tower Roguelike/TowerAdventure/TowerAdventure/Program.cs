@@ -52,7 +52,7 @@ namespace TowerAdventure
                 if (ActorList.p_cActorList[i] != null)
                 {
                     ActorList.p_cActorList[i].SetAppearance('@');
-                    ActorList.p_cActorList[i].SetPos(7, 8);
+                    ActorList.p_cActorList[i].SetPos(3, 3);
                 }
 
             }

@@ -44,7 +44,7 @@ namespace TowerAdventure
 
         public override void Draw()
         {
-            Console.SetCursorPosition(this.nPosX, this.nPosY); //code never reaches this place
+            Console.SetCursorPosition(this.nPosX, this.nPosY); //code used to never reach this place so npc never showed up. Finally fixed. :)
             Console.Write(this.nDisplayChar);
             Console.SetCursorPosition(0, 0); //move cursor so it doesnt show the input button so much
 
@@ -52,10 +52,10 @@ namespace TowerAdventure
 
         public override void Update() //moves npc randomly
         {
-            int iDeltaX = RandomMove.RandomNumber(-1, 2);
-            int iDeltaY = RandomMove.RandomNumber(-1, 2);
+            int iDeltaX = GlobalVar.random.Next(-1, 2); //Randomly chooses either -1, 0 or 1
+            int iDeltaY = GlobalVar.random.Next(-1, 2);
 
-            if(manager.IsPassable(this.nPosX + iDeltaX, this.nPosY + iDeltaY))
+            if (manager.IsPassable(this.nPosX + iDeltaX, this.nPosY + iDeltaY))//Every npc character gets new position instead of just the one supposedly being moved!
             {
                 this.nPosX += iDeltaX;
                 this.nPosY += iDeltaY;
