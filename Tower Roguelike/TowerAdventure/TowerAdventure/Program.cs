@@ -39,11 +39,9 @@ namespace TowerAdventure
 
             Manager manager = new Manager(); //now moved out of while loop
 
-            Human actor = new Human();
-
-
             for (i = 0; i < GlobalVar.MAX_ACTORS; i++)
             {
+                Human actor = new Human(); //New actor for every npc
                 manager.AddActorToList(actor); //p_cActorList filled
             }
 
@@ -71,9 +69,17 @@ namespace TowerAdventure
                     if (ActorList.p_cActorList[i] != null)
                     {
                         ActorList.p_cActorList[i].Update();
+                    }
+                }
+
+                for (i = 0; i < GlobalVar.MAX_ACTORS; i++)
+                {
+                    if (ActorList.p_cActorList[i] != null)
+                    {
                         ActorList.p_cActorList[i].Draw();
                     }
                 }
+
                 Console.SetCursorPosition(nPlayerX, nPlayerY);
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.Write("@");//draw player
