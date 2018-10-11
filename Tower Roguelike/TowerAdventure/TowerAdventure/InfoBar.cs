@@ -13,8 +13,15 @@ namespace TowerAdventure
 
         public void NamePlayer()
         {
-            Console.WriteLine("Tell us your name:");
+            Console.WriteLine("Welcome! You are playing Johuotar's");
+            Console.WriteLine(" _____                      _____   _             _               ");
+            Console.WriteLine("|_   _|___ _ _ _ ___ ___   |  _  |_| |_ _ ___ ___| |_ _ _ ___ ___ ");
+            Console.WriteLine("  | | | . | | | | -_|  _|  |     | . | | | -_|   |  _| | |  _| -_|");
+            Console.WriteLine("  |_| |___|_____|___|_|    |__|__|___||_/|___|_|_|_| |___|_| |___|");
+            Console.WriteLine("");
+            Console.Write("Please tell us what to call you: ");
             program.playername = Console.ReadLine(); //set name
+            Console.Clear();
         }
 
         public void DrawStats()
